@@ -38,6 +38,8 @@ DisplayField = namedtuple(
 
 
 def generate_filename(title, ends_with):
+    if bool(re.search('[а-яА-Я]', title)):
+        title = 'report'
     title = title.split('.')[0]
     title.replace(' ', '_')
     title += ('_' + datetime.datetime.now().strftime("%m%d_%H%M"))
