@@ -183,7 +183,7 @@ class FieldsView(RelatedFieldsView):
         result = []
         fields = None
         filters = None
-        extra = None
+        extra = list(map(lambda properties: properties['label'], field_data['properties']))
         defaults = None
         meta = getattr(field_data['model'], 'ReportBuilder', None)
         if meta is not None:
@@ -244,9 +244,9 @@ class FieldsView(RelatedFieldsView):
                 field_attr = getattr(field_data['model'], field, None)
                 if isinstance(field_attr, (property, cached_property)):
                     result += [{
-                        'name': field,
+                        'name': 'Свойство_' + field,
                         'field': field,
-                        'field_verbose': field,
+                        'field_verbose': 'Свойство_' + field,
                         'field_type': 'Property',
                         'field_choices': None,
                         'can_filter': True if filters is None or
