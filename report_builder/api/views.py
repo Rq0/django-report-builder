@@ -146,7 +146,9 @@ class RelatedFieldsView(ReportBuilderViewMixin, GetFieldsMixin, APIView):
                     included_model = False
             verbose_name = getattr(new_field, 'verbose_name', None)
             if verbose_name is None:
-                verbose_name = new_field.get_accessor_name()
+                verbose_name = "%s [%s]" % (
+                    new_field.field.model._meta.verbose_name_plural,
+                    new_field.get_accessor_name())
             result += [{
                 'field_name': new_field.field_name,
                 'verbose_name': verbose_name,
@@ -217,7 +219,7 @@ class FieldsView(RelatedFieldsView):
             if not verbose_name:
                 verbose_name = new_field.get_accessor_name()
             result += [{
-                'name': new_field.name,
+                'name': verbose_name,
                 'field': new_field.name,
                 'field_verbose': verbose_name,
                 'field_type': new_field.get_internal_type(),
