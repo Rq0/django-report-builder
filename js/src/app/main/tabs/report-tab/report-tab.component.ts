@@ -21,10 +21,10 @@ import { IExportType } from '../../../models/api';
   template: `
   <div class="app-report-tab">
     <div>
-      <button mat-button [disabled]="!(dirty$ | async)" (click)="this.onSave()">Save</button>
-      <button mat-button (click)="this.makePreview()">Preview</button>
-      <button mat-button (click)="this.exportReport('xlsx')">XLSX</button>
-      <button mat-button (click)="this.exportReport('csv')">CSV</button>
+      <button mat-button [disabled]="!(dirty$ | async)" (click)="this.onSave()">Сохранить</button>
+      <button mat-button (click)="this.makePreview()">Предпросмотр в браузере</button>
+      <button mat-button (click)="this.exportReport('xlsx')">Экспорт в excel</button>
+      <button mat-button (click)="this.exportReport('csv')">Экспорт в CSV</button>
       <app-last-report *ngIf="lastGeneratedReport$ | async" [report]="lastGeneratedReport$ | async"></app-last-report>
       <app-saved-timestamp [lastSaved]="this.lastSaved$ | async" ></app-saved-timestamp>
     </div>

@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 export class SavedTimestampComponent {
   constructor() {}
   @Input() lastSaved?: Date;
-  notSaved = 'Report has not been saved';
+  notSaved = 'Отчет не был сохранен';
 }

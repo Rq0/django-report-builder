@@ -25,11 +25,11 @@
     <mat-form-field>
       <mat-select (selectionChange)="editField({aggregate: $event.value})" [value]="field.aggregate || ''">
         <mat-option value="">----------</mat-option>
-        <mat-option value="Sum">Sum</mat-option>
-        <mat-option value="Count">Count</mat-option>
-        <mat-option value="Avg">Avg</mat-option>
-        <mat-option value="Max">Max</mat-option>
-        <mat-option value="Min">Min</mat-option>
+        <mat-option value="Sum">Суммировать</mat-option>
+        <mat-option value="Count">Посчитать количество</mat-option>
+        <mat-option value="Avg">Среднее</mat-option>
+        <mat-option value="Max">Максимальное</mat-option>
+        <mat-option value="Min">Минимальное</mat-option>
       </mat-select>
     </mat-form-field>
   </div>

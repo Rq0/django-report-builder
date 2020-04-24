@@ -1,6 +1,6 @@
 <div class="form-container">
   <mat-card class="report-form">
-    <mat-card-title class="report-title">Add New Report</mat-card-title>
+    <mat-card-title class="report-title">Создать новый отчет</mat-card-title>
 
     <app-error *ngIf="errors.length" [errors]="errors"></app-error>
 
@@ -8,7 +8,7 @@
       <mat-form-field>
         <input
           matInput
-          placeholder="Report Name"
+          placeholder="Название отчета"
           [(ngModel)]="form.name"
           name="name"
           required
@@ -18,7 +18,7 @@
       <mat-form-field>
         <input
           matInput
-          placeholder="Description"
+          placeholder="Описание"
           [(ngModel)]="form.description"
           name="description"
         />
@@ -26,7 +26,7 @@
 
       <mat-form-field>
         <mat-select
-          placeholder="Root Model"
+          placeholder="Основная модель"
           [(ngModel)]="form.root_model"
           name="root_model"
           required
@@ -47,7 +47,7 @@
         color="primary"
         [disabled]="!form.name.trim() || !form.root_model"
       >
-        Create Report
+        Создать отчет
       </button>
     </form>
   </mat-card>

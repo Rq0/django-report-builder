@@ -8,14 +8,14 @@
         <mat-icon [color]="'warn'">error</mat-icon>
       </button>
     </div>
-    <div class="mat-header-cell">Field</div>
-    <div class="mat-header-cell">Name</div>
-    <div class="mat-header-cell narrow">Sort</div>
-    <div class="mat-header-cell narrow">Desc?</div>
-    <div class="mat-header-cell">Aggregate</div>
-    <div class="mat-header-cell">Format</div>
-    <div class="mat-header-cell narrow">Total</div>
-    <div class="mat-header-cell narrow">Group</div>
+    <div class="mat-header-cell">Поле</div>
+    <div class="mat-header-cell">Название</div>
+    <div class="mat-header-cell narrow">Порядок сортировки</div>
+    <div class="mat-header-cell narrow">Без повторений?</div>
+    <div class="mat-header-cell">Объеденить</div>
+    <div class="mat-header-cell">Формат</div>
+    <div class="mat-header-cell narrow">Подсчитать итог</div>
+    <div class="mat-header-cell narrow">Группировать</div>
   </div>
   <tree-root [nodes]="fields" [options]="treeOptions">
     <ng-template #treeNodeWrapperTemplate let-node let-index="index">

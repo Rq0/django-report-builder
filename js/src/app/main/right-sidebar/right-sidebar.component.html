@@ -1,31 +1,31 @@
 <div class="header">
-  <h3>{{ modelName }} relations
+  <h3>Связи для {{ modelName }}
     <mat-icon *ngIf="!lockOpen" (click)="close.emit()" class="close-icon">close</mat-icon>
   </h3>
 </div>
 
 <div class="example-header">
   <mat-form-field>
-    <input id="filter" #filter matInput (keyup)="tree.treeModel.filterNodes(filter.value)" placeholder="Search Related Fields">
+    <input id="filter" #filter matInput (keyup)="tree.treeModel.filterNodes(filter.value)" placeholder="Поиск связанных полей">
   </mat-form-field>
 </div>
 
 <tree-root #tree [nodes]="nodes" (toggleExpanded)="onExpand($event)" (activate)="onActivate($event)"></tree-root>
 
 <div class="header">
-  <h3>Fields</h3>
+  <h3>Поля выбранной модели</h3>
 </div>
 
 <div class="example-header">
   <mat-form-field>
-    <input #searchFields matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Fields">
+    <input #searchFields matInput (keyup)="applyFilter($event.target.value)" placeholder="Поиск полей">
   </mat-form-field>
 </div>
 
 <mat-table [dataSource]="fieldDataSource" matSort #table matSortDisableClear="true">
 
   <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef mat-sort-header>Field Name</mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Название поля</mat-header-cell>
     <mat-cell *matCellDef="let field" (click)="selectField.emit(field)">{{field.name}}
     </mat-cell>
   </ng-container>
@@ -40,7 +40,7 @@
         </span>
       </button>
 
-    </mat-cell>å
+    </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumnsField"></mat-header-row>

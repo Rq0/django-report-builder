@@ -8,11 +8,11 @@
         <mat-icon [color]="'warn'">error</mat-icon>
       </button>
     </div>
-    <div class="mat-header-cell">Field</div>
-    <div class="mat-header-cell">Filter Type</div>
-    <div class="mat-header-cell">Values</div>
+    <div class="mat-header-cell">Поле</div>
+    <div class="mat-header-cell">Тип фильтра</div>
+    <div class="mat-header-cell">Фильтр</div>
     <div class="mat-header-cell"></div>
-    <div class="mat-header-cell">Exclude</div>
+    <div class="mat-header-cell">Исключить такие записи?</div>
   </div>
   <tree-root [nodes]="filters" [options]="treeOptions">
     <ng-template #treeNodeWrapperTemplate let-node let-index="index">

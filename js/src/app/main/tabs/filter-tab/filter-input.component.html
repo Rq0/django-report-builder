@@ -1,13 +1,13 @@
 <div [ngSwitch]="filterType">
   <mat-form-field *ngSwitchCase="'week_day'">
     <mat-select (selectionChange)="valueChange.emit($event.value)" [value]="value">
-      <mat-option value="1">Sunday</mat-option>
-      <mat-option value="2">Monday</mat-option>
-      <mat-option value="3">Tuesday</mat-option>
-      <mat-option value="4">Wednesday</mat-option>
-      <mat-option value="5">Thursday</mat-option>
-      <mat-option value="6">Friday</mat-option>
-      <mat-option value="7">Saturday</mat-option>
+      <mat-option value="1">Понедельник</mat-option>
+      <mat-option value="2">Вторник</mat-option>
+      <mat-option value="3">Среда</mat-option>
+      <mat-option value="4">Четверг</mat-option>
+      <mat-option value="5">Пятница</mat-option>
+      <mat-option value="6">Суббота</mat-option>
+      <mat-option value="7">Воскресенье</mat-option>
     </mat-select>
   </mat-form-field>
 
