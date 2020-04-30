@@ -1,6 +1,7 @@
 interface IContentType {
   pk: number;
   name: string;
+  model: string;
 }
 
 export type ContentTypeResponse = IContentType[];

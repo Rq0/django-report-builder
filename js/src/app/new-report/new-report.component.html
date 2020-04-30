@@ -35,7 +35,7 @@
             *ngFor="let model of root_model_choices$ | async"
             [value]="model.pk"
           >
-            {{ model.name }}
+            {{ model.name }} | {{ model.model }}
           </mat-option>
         </mat-select>
       </mat-form-field>
